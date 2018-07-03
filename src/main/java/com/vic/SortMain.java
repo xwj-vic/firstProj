@@ -3,13 +3,19 @@ package com.vic;
 public class SortMain {
 
     public static void main(String[] args) {
-        int[] numbers = {38, 5, 8, 98, 58, 10, 100, 50};
+        int[] numbers = {38, 5, 8, 98, 58, 10, 100, 50, 58};
         SortMain sortMain = new SortMain();
 //        sortMain.bubboSort(numbers);
         sortMain.selectSort(numbers);
 //        sortMain.binarySearch(numbers, 8);
     }
 
+    /**
+     * 冒泡排序
+     *
+     * @param numbers
+     * @return
+     */
     public int[] bubboSort(int[] numbers) {
         int temp;
         for (int i = 0; i < numbers.length - 1; i++) {
@@ -27,6 +33,12 @@ public class SortMain {
         return numbers;
     }
 
+    /**
+     * 选择排序
+     *
+     * @param numbers
+     * @return
+     */
     public int[] selectSort(int[] numbers) {
         int temp;
         for (int i = 0; i < numbers.length - 1; i++) {
@@ -45,6 +57,13 @@ public class SortMain {
         return numbers;
     }
 
+    /**
+     * 二分查找
+     *
+     * @param numbers
+     * @param target
+     * @return
+     */
     public int binarySearch(int[] numbers, int target) {
         int left = 0;
         int right = numbers.length - 1;
